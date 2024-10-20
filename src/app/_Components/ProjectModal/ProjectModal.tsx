@@ -65,7 +65,7 @@ const ProjectModal = ({
               }}
               className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-20
                 sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-screen overflow-y-auto
-                mx-1 py-20 sm:pt-0 sm:mx-2"
+                mx-1 pt-20 sm:py-0 sm:pt-10 sm:mx-2"
             >
               <FaTimes
                 className="absolute top-20 sm:top-3 right-3 text-2xl cursor-pointer"
@@ -145,7 +145,7 @@ const ProjectModal = ({
 
               <div
                 className="flex flex-wrap gap-3 justify-between items-center sm:gap-0 bg-gray-700
-                  dark:bg-border py-5 sm:py-3 p-3"
+                  dark:bg-border pb-10 sm:pb-3 py-5 sm:py-3 p-3"
               >
                 <div className="techIcons flex gap-2">
                   {project.technologiesIcons.map((Icon, idx) => {
