@@ -100,7 +100,7 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
                       className="w-full group-hover:scale-105 transition-all duration-500"
                     />
 
-                    <div className="flex w-full justify-between items-center px-3 pb-2">
+                    <div className="flex flex-wrap w-full justify-between items-center px-3 pb-2">
                       <ul className="flex gap-1">
                         {_project.technologiesIcons
                           .slice(0, 4)

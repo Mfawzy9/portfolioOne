@@ -36,7 +36,8 @@ const ProjectModal = ({
       <AnimatePresence mode="wait">
         {modal && (
           <motion.div
-            className="fixed inset-0 bg-black/70 z-30 flex items-center justify-center"
+            className="fixed inset-0 bg-black/70 z-30 flex items-center justify-center h-screen
+              w-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             // exit={{ opacity: 0, display: "none" }}
@@ -64,16 +65,16 @@ const ProjectModal = ({
               }}
               className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-hidden
                 shadow-[0_0_7px_0px] shadow-ring relative overflow-y-auto max-h-screen mx-1
-                sm:mx-2"
+                pt-10 sm:pt-0 sm:mx-2"
             >
               <FaTimes
-                className="absolute top-3 right-3 text-2xl cursor-pointer"
+                className="absolute top-10 sm:top-3 right-3 text-2xl cursor-pointer"
                 onClick={() => {
                   setModal(false);
                   document.body.classList.remove("overflow-y-hidden");
                 }}
               />
-              <h3 className="text-center pt-5 text-2xl font-bold uppercase">
+              <h3 className="text-center text-2xl font-bold uppercase">
                 {project.title}
               </h3>
               <div className="flex justify-center items-center">
@@ -142,7 +143,7 @@ const ProjectModal = ({
 
               <div
                 className="flex flex-wrap gap-3 justify-between items-center sm:gap-0 bg-gray-700
-                  dark:bg-border p-2"
+                  dark:bg-border py-5 sm:py-3 p-3"
               >
                 <div className="techIcons flex gap-2">
                   {project.technologiesIcons.map((Icon, idx) => {
