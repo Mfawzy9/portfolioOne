@@ -64,11 +64,11 @@ const ProjectModal = ({
                 damping: 15,
               }}
               className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-20
-                sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-full mx-1 pt-10 sm:pt-0
-                sm:mx-2"
+                sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-screen overflow-y-auto
+                mx-1 py-20 sm:pt-0 sm:mx-2"
             >
               <FaTimes
-                className="absolute top-10 sm:top-3 right-3 text-2xl cursor-pointer"
+                className="absolute top-20 sm:top-3 right-3 text-2xl cursor-pointer"
                 onClick={() => {
                   setModal(false);
                   document.body.classList.remove("overflow-y-hidden");
