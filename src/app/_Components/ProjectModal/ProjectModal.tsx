@@ -111,7 +111,9 @@ const ProjectModal = ({
                 >
                   description:
                 </h3>
-                <p className="text-sm leading-relaxed">{project.description}</p>
+                <p className="text-sm leading-relaxed overflow-y-auto">
+                  {project.description}
+                </p>
               </div>
 
               {/* technologies */}
@@ -123,7 +125,7 @@ const ProjectModal = ({
                   technologies used:
                 </h3>
 
-                <p className="text-sm inline-block leading-relaxed">
+                <p className="text-sm inline-block leading-relaxed overflow-y-auto">
                   {project.technologies.map((tech, idx) => {
                     return (
                       <Fragment key={idx}>
