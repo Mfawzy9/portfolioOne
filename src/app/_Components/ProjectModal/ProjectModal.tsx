@@ -37,7 +37,7 @@ const ProjectModal = ({
         {modal && (
           <motion.div
             className="fixed inset-0 bg-black/70 z-30 flex items-center justify-center min-h-screen
-              w-screen"
+              overscroll-y-auto w-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             // exit={{ opacity: 0, display: "none" }}
@@ -63,8 +63,9 @@ const ProjectModal = ({
                 stiffness: 260,
                 damping: 15,
               }}
-              className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-10
-                shadow-[0_0_7px_0px] shadow-ring relative max-h-full mx-1 pt-10 sm:pt-0 sm:mx-2"
+              className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-20
+                sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-full mx-1 pt-10 sm:pt-0
+                sm:mx-2"
             >
               <FaTimes
                 className="absolute top-10 sm:top-3 right-3 text-2xl cursor-pointer"
