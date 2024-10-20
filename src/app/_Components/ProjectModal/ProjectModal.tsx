@@ -115,7 +115,7 @@ const ProjectModal = ({
               </div>
 
               {/* technologies */}
-              <div className="px-4">
+              <div className="px-4 overflow-y-scroll">
                 <h3
                   className="text-xl text-muted-foreground font-bold border-b-4 border-l-4 border-ring w-fit
                     ps-1 mb-2"
