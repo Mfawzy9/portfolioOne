@@ -64,8 +64,7 @@ const ProjectModal = ({
                 damping: 15,
               }}
               className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-10
-                shadow-[0_0_7px_0px] shadow-ring relative overflow-y-auto max-h-full mx-1 pt-10
-                sm:pt-0 sm:mx-2"
+                shadow-[0_0_7px_0px] shadow-ring relative max-h-full mx-1 pt-10 sm:pt-0 sm:mx-2"
             >
               <FaTimes
                 className="absolute top-10 sm:top-3 right-3 text-2xl cursor-pointer"
@@ -115,7 +114,7 @@ const ProjectModal = ({
               </div>
 
               {/* technologies */}
-              <div className="px-4 overflow-y-scroll">
+              <div className="px-4">
                 <h3
                   className="text-xl text-muted-foreground font-bold border-b-4 border-l-4 border-ring w-fit
                     ps-1 mb-2"
