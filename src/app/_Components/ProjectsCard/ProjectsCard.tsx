@@ -4,7 +4,7 @@ import { useLoaderProvider } from "@/app/Context/LoaderContext/LoaderContext";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ProjectsTabs } from "../ProjectsTabs/ProjectsTabs";
 import ProjectModal from "../ProjectModal/ProjectModal";
 
@@ -47,79 +47,90 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
         >
           <AnimatePresence>
             {filteredArr.map((_project, idx) => (
-              <Fragment key={_project.id}>
-                <motion.div
-                  layout
-                  initial={{ opacity: 0, transform: "scale(0)" }}
-                  whileInView={{ opacity: 1, transform: "scale(1)" }}
-                  viewport={{ once: true, margin: "10px" }}
-                  exit={{ opacity: 0, transform: "scale(0)" }}
-                  transition={{
-                    duration: delay ? 1 : 0.5,
+              <motion.div
+                key={_project.id}
+                layout
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "20px" }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{
+                  layout: {
+                    duration: delay ? 1 : 0.45,
                     ease: "easeInOut",
-                    delay: loading ? 2.3 : delay ? 0.4 : 0,
-                  }}
-                  className="relative z-10 group block p-3 h-full w-full"
-                  onMouseEnter={() => setHoveredIndex(idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                  onClick={() => {
-                    openModal();
-                    setModalProject(_project);
-                  }}
-                  role="button"
-                >
-                  <AnimatePresence>
-                    {hoveredIndex === idx && (
-                      <motion.span
-                        layoutId="hoverEffect"
-                        className="absolute inset-0 h-full w-full bg-secondary-foreground dark:bg-gray-500 block
-                          rounded"
-                        initial={{ opacity: 0 }}
-                        animate={{
-                          opacity: 1,
-                          transition: { duration: 0.15 },
-                        }}
-                        exit={{
-                          opacity: 0,
-                          transition: { duration: 0.15, delay: 0.2 },
-                        }}
-                      />
-                    )}
-                  </AnimatePresence>
-
-                  <div
-                    className="flex flex-col justify-center items-center gap-5 bg-primary-foreground
-                      overflow-hidden shadow-[0_0_6px_0px] shadow-ring relative z-20 rounded"
-                  >
-                    <Image
-                      priority
-                      src={_project.img}
-                      width={450}
-                      height={250}
-                      alt={_project.title}
-                      className="w-full group-hover:scale-105 transition-all duration-500"
+                    delay: loading ? 2.2 : delay ? 0.4 : 0,
+                  },
+                  opacity: {
+                    duration: delay ? 1 : 0.45,
+                    ease: "easeInOut",
+                    delay: loading ? 2.2 : delay ? 0.4 : 0,
+                  },
+                  scale: {
+                    duration: delay ? 1 : 0.45,
+                    ease: "easeInOut",
+                    delay: loading ? 2.2 : delay ? 0.4 : 0,
+                  },
+                }}
+                className="relative z-10 group block p-3 h-full w-full"
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => {
+                  openModal();
+                  setModalProject(_project);
+                }}
+                role="button"
+              >
+                <AnimatePresence>
+                  {hoveredIndex === idx && (
+                    <motion.span
+                      layoutId="hoverEffect"
+                      className="absolute inset-0 h-full w-full bg-secondary-foreground dark:bg-gray-500 block
+                        rounded"
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: 1,
+                        transition: { duration: 0.15 },
+                      }}
+                      exit={{
+                        opacity: 0,
+                        transition: { duration: 0.15, delay: 0.2 },
+                      }}
                     />
+                  )}
+                </AnimatePresence>
 
-                    <div className="flex flex-wrap w-full justify-between items-center px-3 pb-2">
-                      <ul className="flex gap-1">
-                        {_project.technologiesIcons
-                          .slice(0, 4)
-                          .map((Icon, idx) => (
-                            <li
-                              title={`${String(Icon?.name?.toString())}`}
-                              key={Icon.name + idx}
-                              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border p-2 border-muted-foreground/40
-                                bg-black/80"
-                            >
-                              <Icon className="w-full h-full" />
-                            </li>
-                          ))}
-                      </ul>
-                      <h4 className="font-bold italic">{_project.title}</h4>
-                    </div>
+                <div
+                  className="flex flex-col justify-center items-center gap-5 bg-primary-foreground
+                    overflow-hidden shadow-[0_0_6px_0px] shadow-ring relative z-20 rounded"
+                >
+                  <Image
+                    priority
+                    src={_project.img}
+                    width={450}
+                    height={250}
+                    alt={_project.title}
+                    className="w-full group-hover:scale-105 transition-all duration-500"
+                  />
+
+                  <div className="flex flex-wrap w-full justify-between items-center px-3 pb-2">
+                    <ul className="flex gap-1">
+                      {_project.technologiesIcons
+                        .slice(0, 4)
+                        .map((Icon, idx) => (
+                          <li
+                            title={`${String(Icon?.name?.toString())}`}
+                            key={Icon.name + idx}
+                            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border p-2 border-muted-foreground/40
+                              bg-black/80"
+                          >
+                            <Icon className="w-full h-full" />
+                          </li>
+                        ))}
+                    </ul>
+                    <h4 className="font-bold italic">{_project.title}</h4>
                   </div>
-                </motion.div>
-              </Fragment>
+                </div>
+              </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
@@ -127,3 +138,16 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
     </div>
   );
 };
+
+// key={_project.id}
+// layout
+// initial={{ opacity: 0, transform: "scale(0)" }}
+// animate={{ opacity: 1, transform: "scale(1)" }}
+// // whileInView={{ opacity: 1, transform: "scale(1)" }}
+// // viewport={{ once: true, margin: "10px" }}
+// exit={{ opacity: 0, transform: "scale(0)" }}
+// transition={{
+//   duration: delay ? 1 : 0.5,
+//   ease: "easeInOut",
+//   delay: loading ? 2.2 : delay ? 0.4 : 0,
+// }}

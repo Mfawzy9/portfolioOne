@@ -1,4 +1,5 @@
 import { IProject, projectsArr } from "@/app/(Pages)/projects/projectsArr";
+import { useLoaderProvider } from "@/app/Context/LoaderContext/LoaderContext";
 import { motion } from "framer-motion";
 import { memo, useState } from "react";
 
@@ -11,6 +12,7 @@ export const ProjectsTabs = memo(function ProjectsTabs({
   const categories = [...new Set(ProjectsCategories)];
   const categoriesWithAll = [...categories, "All"];
   const [activeTab, setActiveTab] = useState("All");
+  const { loading } = useLoaderProvider();
 
   const handleFilter = (category: string) => {
     if (category === "All") {
@@ -32,7 +34,10 @@ export const ProjectsTabs = memo(function ProjectsTabs({
           <motion.li
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1.2 + idx * 0.2 }}
+            transition={{
+              duration: 0.3,
+              delay: loading ? 2.3 + idx * 0.2 : 1.2 + idx * 0.2,
+            }}
             key={_category}
             className={
               " relative text-xs sm:text-base font-semibold px-2 sm:px-2.5 py-1 rounded-3xl"
