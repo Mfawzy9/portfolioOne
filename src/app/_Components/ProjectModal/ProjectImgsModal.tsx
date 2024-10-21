@@ -37,7 +37,7 @@ const ImgModal = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imgModal]);
   return (
-    <div className="fixed inset-0 bg-black/70 z-30 flex items-center justify-center img-modal">
+    <div className="fixed inset-0 bg-black/80 z-30 flex items-center justify-center img-modal">
       <motion.div
         initial={{
           opacity: 0,
@@ -54,8 +54,7 @@ const ImgModal = ({
             duration: 0.2,
           },
         }}
-        className="max-w-xl mx-auto rounded sm:mb-0 shadow-[0_0_7px_0px] shadow-foreground relative
-          mix-blend-difference"
+        className="w-11/12 mx-auto rounded sm:mb-0 relative"
       >
         {imgLoading && (
           <div className="absolute inset-0 z-30 flex items-center justify-center">
@@ -68,7 +67,7 @@ const ImgModal = ({
         {!imgLoading && (
           <div className="absolute top-3 right-3 p-1 rounded-full bg-black">
             <FaTimes
-              className="text-xl cursor-pointer"
+              className="text-xl cursor-pointer text-white"
               onClick={() => setImgModal({ img: "", idx: 0 })}
             />
           </div>
@@ -77,10 +76,10 @@ const ImgModal = ({
           onLoad={() => setImgLoading(false)}
           src={img}
           alt={"image" + idx}
-          width={600}
+          width={800}
           height={400}
           quality={100}
-          className="w-full h-full"
+          className="w-full h-full ring"
         />
       </motion.div>
     </div>
