@@ -47,8 +47,8 @@ export const projectsArr: IProject[] = [
       "/assets/projectsImgs/portfolio1/NewFolder/4.jpg",
       "/assets/projectsImgs/portfolio1/NewFolder/5.jpg",
     ],
-    demo: "https://first-portfolio-woad.vercel.app/",
-    repo: "https://github.com/Mfawzy9/FirstPortfolio",
+    demo: "https://portfolio-one-xi.vercel.app/",
+    repo: "https://github.com/Mfawzy9/portfolioOne",
     technologies: [
       {
         name: "Next.js",

@@ -118,10 +118,9 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
                         .slice(0, 4)
                         .map((Icon, idx) => (
                           <li
-                            title={`${String(Icon?.name?.toString())}`}
                             key={Icon.name + idx}
-                            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border p-2 border-muted-foreground/40
-                              bg-black/80"
+                            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border flex items-center justify-center
+                              border-muted-foreground/40 bg-black/80"
                           >
                             <Icon className="w-full h-full" />
                           </li>

@@ -47,7 +47,7 @@ export const SkillsCard = () => {
             target="_blank"
             href={skill?.link}
             className="relative overflow-hidden group block h-full w-full shadow-md shadow-ring sm:px-3
-              py-2.5 bg-primary-foreground rounded-xl"
+              py-1 bg-primary-foreground rounded-xl"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -78,7 +78,7 @@ export const SkillsCard = () => {
               )}
               <h4
                 className={
-                  "font-bold tracking-wide mt-4 relative z-20 text-ring text-center"
+                  "font-bold tracking-wide mt-3 relative z-20 text-ring text-center"
                 }
               >
                 {skill?.skill}
