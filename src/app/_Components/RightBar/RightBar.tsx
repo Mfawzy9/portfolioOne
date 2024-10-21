@@ -35,9 +35,9 @@ const RightBar = () => {
         md:left-auto md:top-1/2 md:-translate-y-1/2 md:px-1 md:py-2"
     >
       <ul
-        className="flex flex-row items-center justify-center gap-2 rounded bg-black/20 p-2
-          backdrop-blur-sm shadow-md shadow-ring dark:bg-gray-800/60 md:flex-col md:gap-0
-          md:space-y-4"
+        className="flex flex-row items-center justify-center gap-2 bg-gray-300 rounded
+          md:bg-black/20 p-2 backdrop-blur-sm shadow-md shadow-ring dark:bg-gray-950
+          md:dark:bg-gray-800/60 md:flex-col md:gap-0 md:space-y-4"
       >
         {links.map((link) => (
           <li key={link.lable}>

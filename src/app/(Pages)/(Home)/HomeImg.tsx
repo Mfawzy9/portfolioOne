@@ -22,12 +22,12 @@ const HomeImg = () => {
           key={src.src}
           initial={{
             opacity: 0,
-            transform: src === mainImg ? "scale(0.75)" : "scale(1.3)",
+            transform: "scale(1.3)",
           }}
           animate={{ opacity: 1, transform: "scale(1)" }}
           exit={{
             opacity: 0,
-            transform: secImg === src ? "scale(0.75)" : "scale(1.3)",
+            transform: "scale(1.3)",
           }}
           transition={{ duration: 0.4 }}
           className="w-full h-auto"

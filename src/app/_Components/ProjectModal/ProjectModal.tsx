@@ -2,8 +2,9 @@ import { IProject } from "@/app/(Pages)/projects/projectsArr";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, memo, useEffect } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 import { FaGithub, FaLink, FaTimes } from "react-icons/fa";
+import ImgModal from "./ProjectImgsModal";
 
 const ProjectModal = ({
   modal,
@@ -14,10 +15,15 @@ const ProjectModal = ({
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
   project: IProject;
 }) => {
+  const [imgModal, setImgModal] = useState({
+    img: "",
+    idx: 0,
+  });
   const closeModal = (e: MouseEvent) => {
     if (
       e.target &&
-      (e.target as HTMLElement).classList.contains("fixed") &&
+      (e.target as HTMLElement).classList.contains("project-modal") &&
+      !imgModal.img &&
       modal
     ) {
       setModal(false);
@@ -37,10 +43,9 @@ const ProjectModal = ({
         {modal && (
           <motion.div
             className="fixed inset-0 bg-black/70 z-30 flex items-center justify-center min-h-screen
-              overscroll-y-auto w-screen"
+              project-modal overscroll-y-auto w-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            // exit={{ opacity: 0, display: "none" }}
           >
             <motion.div
               initial={{
@@ -67,6 +72,16 @@ const ProjectModal = ({
                 sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-screen overflow-y-auto
                 mx-1 pt-20 sm:py-0 sm:pt-10 sm:mx-2"
             >
+              <AnimatePresence mode="wait">
+                {imgModal.img !== "" && (
+                  <ImgModal
+                    img={imgModal.img}
+                    idx={imgModal.idx}
+                    imgModal={imgModal}
+                    setImgModal={setImgModal}
+                  />
+                )}
+              </AnimatePresence>
               <FaTimes
                 className="absolute top-20 sm:top-3 right-3 text-2xl cursor-pointer"
                 onClick={() => {
@@ -83,12 +98,16 @@ const ProjectModal = ({
 
                   return (
                     <div
+                      role="button"
                       className={`rounded-xl -mr-4 p-1 bg-black border-black border flex-shrink-0 hover:!scale-125
                       hover:z-10 transition-all duration-300 relative overflow-hidden`}
                       style={{
                         transform: `rotate(${randomRotate}deg)`,
                       }}
                       key={idx}
+                      onClick={() =>
+                        setImgModal({ img: project.imgs[idx], idx: idx })
+                      }
                     >
                       <Image
                         alt={"projectImage" + idx}
