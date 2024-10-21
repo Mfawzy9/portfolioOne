@@ -138,16 +138,3 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
     </div>
   );
 };
-
-// key={_project.id}
-// layout
-// initial={{ opacity: 0, transform: "scale(0)" }}
-// animate={{ opacity: 1, transform: "scale(1)" }}
-// // whileInView={{ opacity: 1, transform: "scale(1)" }}
-// // viewport={{ once: true, margin: "10px" }}
-// exit={{ opacity: 0, transform: "scale(0)" }}
-// transition={{
-//   duration: delay ? 1 : 0.5,
-//   ease: "easeInOut",
-//   delay: loading ? 2.2 : delay ? 0.4 : 0,
-// }}
