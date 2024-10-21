@@ -196,7 +196,7 @@ export const projectsArr: IProject[] = [
     id: 2,
     title: "Book Mark",
     description:
-      "A user-friendly app that allows users to save, edit, and delete their favorite website URLs using local storage. Effortlessly organize and manage your bookmarks for quick access to your most cherished online resources!",
+      "A user-friendly app that allows users to save, edit, and delete their favorite website URLs using local storage. It includes built-in validation to ensure that users enter valid URLs, helping them effortlessly organize and manage their bookmarks for quick access to their most cherished online resources!",
     img: "/assets/projectsImgs/BookMark/Cover.jpg",
     imgs: [
       "/assets/projectsImgs/BookMark/NewFolder/1.jpg",
@@ -221,6 +221,11 @@ export const projectsArr: IProject[] = [
         name: "JavaScript",
         description: "Core programming language.",
         link: "https://www.javascript.com/",
+      },
+      {
+        name: "Bootstrap",
+        description: "Responsive design framework.",
+        link: "https://getbootstrap.com/",
       },
     ],
     technologiesIcons: [JavaScript, Bootstrap, HTML, CSS],
@@ -336,7 +341,7 @@ export const projectsArr: IProject[] = [
     id: 6,
     title: "Free To Game",
     description:
-      "This website allows users to explore a wide range of free games organized by categories, complete with links to their official sites for easy access. Featuring robust search functionality and pagination for seamless navigation, it enhances the gaming discovery experience.",
+      "This website allows users to explore a wide range of free games organized by categories, complete with links to their official sites for easy access. Featuring robust search functionality and pagination for seamless navigation, it enhances the gaming discovery experience using Object-Oriented Programming (OOP) for better code organization.",
     img: "/assets/projectsImgs/FreeToGame/Cover.jpg",
     imgs: [
       "/assets/projectsImgs/FreeToGame/NewFolder/1.jpg",
@@ -367,6 +372,11 @@ export const projectsArr: IProject[] = [
         name: "jQuery",
         description: "Simplifies DOM manipulation.",
         link: "https://jquery.com/",
+      },
+      {
+        name: "Bootstrap",
+        description: "Responsive design framework.",
+        link: "https://getbootstrap.com/",
       },
       {
         name: "Object-Oriented Programming",
