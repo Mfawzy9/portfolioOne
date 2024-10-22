@@ -104,9 +104,7 @@ const ProjectModal = ({
                         transform: `rotate(${randomRotate}deg)`,
                       }}
                       key={idx}
-                      onClick={() =>
-                        setImgModal({ img: project.imgs[idx], idx: idx })
-                      }
+                      onClick={() => setImgModal({ img: img, idx: idx })}
                     >
                       <Image
                         alt={"projectImage" + idx}

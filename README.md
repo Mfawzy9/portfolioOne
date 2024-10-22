@@ -13,3 +13,12 @@ A dynamic personal portfolio developed with **[Next.js](https://nextjs.org/)** a
 - **[Context API](https://reactjs.org/docs/context.html)**: A global state management solution.
 - **[Next Themes](https://github.com/danilowoz/next-themes)**: Theme switching for Next.js applications.
 - **[cookies-next](https://github.com/sandii/cookies-next)**: A library for cookie storage management.
+
+## Features
+
+- Dark/light mode toggle
+- Color switcher for custom themes
+- Contact form with email functionality
+- Seamless page transitions
+- Sections for Home, About, Skills, Projects, and Contact
+- Custom cursor functionality
