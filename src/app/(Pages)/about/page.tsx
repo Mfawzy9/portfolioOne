@@ -95,6 +95,8 @@ export default function About() {
                   <li className="mt-2">
                     <Link
                       shallow={false}
+                      aria-label="download cv"
+                      download={"RouteCertification.pdf"}
                       href="/RouteCertification.pdf"
                       target="_blank"
                       className="brightness-150 dark:brightness-100 group hover:shadow-lg hover:shadow-ring/60

@@ -37,7 +37,7 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
     <div className="mt-10">
       <ProjectModal modal={modal} setModal={setModal} project={ModalProject} />
       <ProjectsTabs setFilteredArr={setFilteredArr} />
-      <div className="overflow-hidden mt-5">
+      <div className="mt-5">
         <motion.div
           layout
           className={cn(

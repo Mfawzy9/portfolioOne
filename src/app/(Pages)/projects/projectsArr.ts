@@ -121,6 +121,12 @@ export const projectsArr: IProject[] = [
     repo: "https://github.com/Mfawzy9/FreshCart",
     technologies: [
       {
+        name: "React.js",
+        description:
+          "Flexible JavaScript library for building dynamic user interfaces.",
+        link: "https://react.dev/",
+      },
+      {
         name: "Tailwind CSS",
         description: "Efficient, streamlined styling",
         link: "https://tailwindcss.com/",
