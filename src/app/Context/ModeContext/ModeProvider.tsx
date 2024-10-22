@@ -26,7 +26,7 @@ function AppThemeProviderHelper() {
       setCookie("__theme__", theme, {
         expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 365),
         path: "/",
-        sameSite: "none",
+        sameSite: "lax",
         secure: true,
       });
     }
