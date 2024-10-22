@@ -7,7 +7,7 @@ import { IoCall, IoLanguage } from "react-icons/io5";
 import mainImg from "../../../../public/assets/imgs/me2.png";
 import { IInfos } from "@/app/Interfaces/IAboutInfos";
 import dynamic from "next/dynamic";
-import CursorEffect from "@/app/_Components/CursorEffect/CursorEffect";
+import CursorsContainer from "@/app/_Components/CursorEffects/CursorsContainer";
 
 const VisibilityHandler = dynamic(
   () => import("../../_Components/VisibilityHandler"),
@@ -32,7 +32,7 @@ const infos: IInfos[] = [
 export default function About() {
   return (
     <>
-      <CursorEffect />
+      <CursorsContainer />
       <VisibilityHandler />
       <section className="min-h-screen pb-20 lg:pb-0 flex flex-col justify-center items-center">
         <Content className="mb-4 sm:mb-0 min-w-full">

@@ -11,7 +11,9 @@ export const ColorsContext = createContext<IThemeColorStateParams>(
 );
 
 const ColorsContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [customCursor, setCustomCursor] = useState(getCurrentCursor());
+  const [customCursor, setCustomCursor] = useState<
+    "default" | "circle" | "trail"
+  >(getCurrentCursor());
   const [smallScreen, setSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -22,24 +24,30 @@ const ColorsContextProvider = ({ children }: { children: React.ReactNode }) => {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 768) {
         setSmallScreen(true);
+        document.documentElement.classList.remove("cursor-none");
       } else {
         setSmallScreen(false);
+        if (customCursor === "circle") {
+          document.documentElement.classList.add("cursor-none");
+        } else {
+          document.documentElement.classList.remove("cursor-none");
+        }
       }
     });
-  }, []);
+  }, [customCursor]);
   const [isMounted, setIsMounted] = useState(false);
   const [ringColor, setRingColor] = useState("");
 
-  function getCurrentCursor(): boolean {
+  function getCurrentCursor(): "circle" | "trail" | "default" {
     const cursor = localStorage.getItem("customCursor");
     try {
-      if (cursor === "true" || cursor === null) {
-        return true;
+      if (cursor === "circle" || cursor === null) {
+        return "circle";
       }
-      return false;
+      return cursor as "circle" | "trail" | "default";
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      return true;
+      return "circle";
     }
   }
 
@@ -74,7 +82,7 @@ const ColorsContextProvider = ({ children }: { children: React.ReactNode }) => {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    localStorage.setItem("customCursor", String(customCursor));
+    localStorage.setItem("customCursor", customCursor);
     localStorage.setItem("themeColor", themeColor);
     setGlobalColorTheme(
       resolvedTheme as "light" | "dark",

@@ -1,10 +1,8 @@
 "use client";
-import { useThemeColorProvider } from "@/app/Context/ColorContext/ColorsContext";
 import { motion, Variants } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 
-const CursorEffect = () => {
-  const { customCursor, smallScreen } = useThemeColorProvider();
+const CircleCursor = () => {
   const [cursorPosition, setCursorPosition] = useState<{
     x: string | number;
     y: number | string;
@@ -69,30 +67,28 @@ const CursorEffect = () => {
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, [innerVariant, smallScreen]);
+  }, [innerVariant]);
 
   return (
     <>
-      {customCursor && !smallScreen && (
-        <motion.div
-          id="outerCursor"
-          className={`top-0 left-0 w-9 h-9 rounded-full
+      <motion.div
+        id="outerCursor"
+        className={`top-0 left-0 w-9 h-9 rounded-full
           ${innerVariant === "hovered" ? "border-transparent" : "border-ring"} border-2
           z-[500] pointer-events-none `}
-          variants={outerVariants}
-          animate={"default"}
-        >
-          <motion.div
-            variants={innerVariants}
-            animate={innerVariant}
-            id="innerCursor"
-            className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
+        variants={outerVariants}
+        animate={"default"}
+      >
+        <motion.div
+          variants={innerVariants}
+          animate={innerVariant}
+          id="innerCursor"
+          className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
             pointer-events-none bg-ring`}
-          />
-        </motion.div>
-      )}
+        />
+      </motion.div>
     </>
   );
 };
 
-export default CursorEffect;
+export default memo(CircleCursor);

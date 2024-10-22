@@ -2,7 +2,7 @@
 import { motion, Variants } from "framer-motion";
 import Lottie from "lottie-react";
 import loaderIcon from "../../../../public/hello.json";
-import CursorEffect from "../CursorEffect/CursorEffect";
+import CursorEffect from "../CursorEffects/CircleCursor";
 
 const introIconVariants: Variants = {
   initial: { opacity: 0 },

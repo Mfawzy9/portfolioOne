@@ -109,24 +109,44 @@ const ColorToggler = () => {
             </h1>
             <div className="flex items-center justify-center gap-6">
               <button
-                disabled={!customCursor}
-                onClick={() => setCustomCursor(false)}
+                title="Default"
+                disabled={customCursor === "default"}
+                onClick={() => setCustomCursor("default")}
                 className={`disabled:cursor-not-allowed text-2xl
-                ${customCursor ? " opacity-50 dark:opacity-30" : "opacity-100"}`}
+                ${customCursor === "default" ? "opacity-100" : "opacity-50 dark:opacity-30"}`}
               >
                 <FaMousePointer />
               </button>
               <button
-                disabled={customCursor}
-                onClick={() => setCustomCursor(true)}
+                title="Circle"
+                disabled={customCursor === "circle"}
+                onClick={() => setCustomCursor("circle")}
                 className={`disabled:cursor-not-allowed relative h-9 w-9 rounded-full border-ring border-2
-                ${customCursor ? "opacity-100" : "opacity-50 dark:opacity-30"}`}
+                ${customCursor === "circle" ? "opacity-100" : "opacity-50 dark:opacity-30"}`}
               >
-                <FaMousePointer className="absolute bottom-0 left-[65%] -translate-x-1/2 z-10" />
                 <span
                   className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-ring rounded-full
                     h-2 w-2"
                 />
+              </button>
+
+              <button
+                title="Trail"
+                disabled={customCursor === "trail"}
+                onClick={() => setCustomCursor("trail")}
+                className={`disabled:cursor-not-allowed text-2xl relative
+                ${customCursor === "trail" ? "opacity-100" : "opacity-50 dark:opacity-30"}`}
+              >
+                {["right-0", "-right-2", "-right-4"].map((item, index) => (
+                  <span
+                    key={index}
+                    className={`absolute top-0 ${item} w-2 h-2 bg-ring rounded-full inline-block`}
+                  ></span>
+                ))}
+                {/* <span className="absolute top-0 right-0 w-2 h-2 bg-ring rounded-full inline-block"></span>
+                <span className="absolute top-0 -right-1 w-2 h-2 bg-ring rounded-full inline-block"></span>
+                <span className="absolute top-0 -right-2 w-2 h-2 bg-ring rounded-full inline-block"></span> */}
+                <FaMousePointer />
               </button>
             </div>
           </div>

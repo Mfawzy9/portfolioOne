@@ -4,8 +4,8 @@ import SocialIcons from "@/app/_Components/SocialIcons/SocialIcons";
 import HireMe from "./HireMe";
 import Navigate from "@/app/_Components/Navigate/Navigate";
 import dynamic from "next/dynamic";
-import CursorEffect from "@/app/_Components/CursorEffect/CursorEffect";
 import HomeImg from "./HomeImg";
+import CursorsContainer from "@/app/_Components/CursorEffects/CursorsContainer";
 
 const VisibilityHandler = dynamic(
   () => import("../../_Components/VisibilityHandler"),
@@ -22,7 +22,7 @@ export const generateMetadata = () => {
 export default function Home() {
   return (
     <>
-      <CursorEffect />
+      <CursorsContainer />
       <VisibilityHandler />
       <HireMe />
       <section

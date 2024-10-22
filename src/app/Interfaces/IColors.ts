@@ -12,7 +12,9 @@ export interface IThemeColorStateParams {
   setThemeColor: React.Dispatch<React.SetStateAction<ThemeColors>>;
   ringColor: string;
   setRingColor: React.Dispatch<React.SetStateAction<string>>;
-  customCursor: boolean;
-  setCustomCursor: React.Dispatch<React.SetStateAction<boolean>>;
+  customCursor: "default" | "circle" | "trail";
+  setCustomCursor: React.Dispatch<
+    React.SetStateAction<"default" | "circle" | "trail">
+  >;
   smallScreen: boolean;
 }

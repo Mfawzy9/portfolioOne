@@ -1,5 +1,5 @@
 import Content from "@/app/_Components/Content/Content";
-import CursorEffect from "@/app/_Components/CursorEffect/CursorEffect";
+import CursorsContainer from "@/app/_Components/CursorEffects/CursorsContainer";
 import Title from "@/app/_Components/Title/Title";
 import { SkillsCard } from "@/components/ui/SkillsCard";
 import dynamic from "next/dynamic";
@@ -19,7 +19,7 @@ export const generateMetadata = () => {
 const Skills = () => {
   return (
     <>
-      <CursorEffect />
+      <CursorsContainer />
       <VisibilityHandler />
       <section className="min-h-screen pb-20 lg:pb-0 container flex flex-col justify-center items-center">
         <Content className="min-w-full">

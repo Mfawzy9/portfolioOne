@@ -1,6 +1,6 @@
 import ContactForm from "@/app/_Components/ContactForm/ContactForm";
 import Content from "@/app/_Components/Content/Content";
-import CursorEffect from "@/app/_Components/CursorEffect/CursorEffect";
+import CursorsContainer from "@/app/_Components/CursorEffects/CursorsContainer";
 import SocialIcons from "@/app/_Components/SocialIcons/SocialIcons";
 import Title from "@/app/_Components/Title/Title";
 import dynamic from "next/dynamic";
@@ -22,7 +22,7 @@ export const generateMetadata = () => {
 const Contact = () => {
   return (
     <>
-      <CursorEffect />
+      <CursorsContainer />
       <VisibilityHandler />
       <section className="min-h-screen flex flex-col justify-center py-20 lg:pb-10">
         <Content>
