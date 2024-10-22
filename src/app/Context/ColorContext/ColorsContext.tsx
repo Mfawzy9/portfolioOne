@@ -24,14 +24,8 @@ const ColorsContextProvider = ({ children }: { children: React.ReactNode }) => {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 768) {
         setSmallScreen(true);
-        document.documentElement.classList.remove("cursor-none");
       } else {
         setSmallScreen(false);
-        if (customCursor === "circle") {
-          document.documentElement.classList.add("cursor-none");
-        } else {
-          document.documentElement.classList.remove("cursor-none");
-        }
       }
     });
   }, [customCursor]);
