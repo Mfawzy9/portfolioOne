@@ -2,7 +2,7 @@
 import { motion, Variants } from "framer-motion";
 import Lottie from "lottie-react";
 import loaderIcon from "../../../../public/hello.json";
-import CursorEffect from "../CursorEffects/CircleCursor";
+import CursorsContainer from "../CursorEffects/CursorsContainer";
 
 const introIconVariants: Variants = {
   initial: { opacity: 0 },
@@ -33,7 +33,7 @@ const loaderContainerVariants: Variants = {
 const IntroLoading: React.FC = () => {
   return (
     <>
-      <CursorEffect />
+      <CursorsContainer />
       <motion.div
         variants={loaderContainerVariants}
         initial="initial"
