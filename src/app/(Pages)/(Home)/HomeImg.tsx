@@ -22,12 +22,10 @@ const HomeImg = () => {
           key={src.src}
           initial={{
             opacity: 0,
-            transform: "scale(1.3)",
           }}
-          animate={{ opacity: 1, transform: "scale(1)" }}
+          animate={{ opacity: 1 }}
           exit={{
             opacity: 0,
-            transform: "scale(1.3)",
           }}
           transition={{ duration: 0.4 }}
           className="w-full h-auto"
@@ -35,8 +33,9 @@ const HomeImg = () => {
           <Image
             priority
             src={src}
-            className={`rounded-full border border-ring scale-75 lg:border-0 lg:rounded-none lg:w-full
-              lg:h-full transition-transform duration-500 ease-in-out`}
+            className={`rounded-full border border-ring ${dark ? "scale-75" : "scale-75 xl:scale-[0.6]"}
+              lg:border-0 lg:rounded-none lg:w-full lg:h-full transition-transform
+              duration-500 ease-in-out`}
             alt="profile photo"
             width={666}
             height={666}

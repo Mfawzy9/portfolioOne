@@ -36,7 +36,7 @@ export interface Itechonlogy {
 export const projectsArr: IProject[] = [
   {
     id: 14,
-    title: "Portfolio1",
+    title: "PortfolioOne",
     description:
       "A dynamic personal portfolio built with Next.js and TypeScript, featuring Tailwind CSS styling and Framer Motion animations for seamless interactions. It offers dark/light mode, a color switcher, and a fully functional contact form that sends emails directly to the portfolio owner. With smooth page transitions and Context API handling theme, color, and custom cursor settings, the portfolio covers essential sections like Home, About, Skills, Projects, and Contact.",
     img: "/assets/projectsImgs/portfolio1/Cover.jpg",
@@ -102,7 +102,7 @@ export const projectsArr: IProject[] = [
   },
   {
     id: 1,
-    title: "E-commerce",
+    title: "Fresh Cart",
     description:
       "A dynamic shopping platform offering seamless cart and wishlist management, real-time product quantity updates, and a smooth checkout experience with online payment or cash on delivery options. Features include dark/light mode, secure authentication, comprehensive order summaries, user account management, real-time product search, and easy shopping by category and brand, all designed to enhance the user experience.",
     img: "/assets/projectsImgs/freshCart/Cover.jpg",
@@ -194,7 +194,7 @@ export const projectsArr: IProject[] = [
   },
   {
     id: 2,
-    title: "Book Mark",
+    title: "BookMark",
     description:
       "A user-friendly app that allows users to save, edit, and delete their favorite website URLs using local storage. It includes built-in validation to ensure that users enter valid URLs, helping them effortlessly organize and manage their bookmarks for quick access to their most cherished online resources!",
     img: "/assets/projectsImgs/BookMark/Cover.jpg",

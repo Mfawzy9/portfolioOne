@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
@@ -38,24 +37,7 @@ const ImgModal = ({
   }, [imgModal]);
   return (
     <div className="fixed inset-0 bg-black/80 z-30 flex items-center justify-center img-modal">
-      <motion.div
-        initial={{
-          opacity: 0,
-          transform: "scale(0) ",
-        }}
-        animate={{
-          opacity: 1,
-          transform: "scale(1) ",
-        }}
-        exit={{
-          opacity: 0,
-          transform: "scale(0) ",
-          transition: {
-            duration: 0.2,
-          },
-        }}
-        className="w-11/12 mx-auto rounded sm:mb-0 relative"
-      >
+      <div className="w-11/12 mx-auto rounded sm:mb-0 relative">
         {imgLoading && (
           <div className="absolute inset-0 z-30 flex items-center justify-center">
             <div
@@ -81,7 +63,7 @@ const ImgModal = ({
           quality={100}
           className="w-full h-full ring"
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

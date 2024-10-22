@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, memo, useEffect, useState } from "react";
 import { FaGithub, FaLink, FaTimes } from "react-icons/fa";
-import ImgModal from "./ProjectImgsModal";
+import ImgModal from "./ImgModal";
 
 const ProjectModal = ({
   modal,
@@ -72,16 +72,15 @@ const ProjectModal = ({
                 sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-screen overflow-y-auto
                 mx-1 pt-20 sm:py-0 sm:pt-10 sm:mx-2"
             >
-              <AnimatePresence mode="wait">
-                {imgModal.img !== "" && (
-                  <ImgModal
-                    img={imgModal.img}
-                    idx={imgModal.idx}
-                    imgModal={imgModal}
-                    setImgModal={setImgModal}
-                  />
-                )}
-              </AnimatePresence>
+              {imgModal.img !== "" && (
+                <ImgModal
+                  img={imgModal.img}
+                  idx={imgModal.idx}
+                  imgModal={imgModal}
+                  setImgModal={setImgModal}
+                />
+              )}
+
               <FaTimes
                 className="absolute top-20 sm:top-3 right-3 text-2xl cursor-pointer"
                 onClick={() => {
@@ -89,7 +88,7 @@ const ProjectModal = ({
                   document.body.classList.remove("overflow-y-hidden");
                 }}
               />
-              <h3 className="text-center text-2xl font-bold uppercase">
+              <h3 className="text-center text-2xl font-bold capitalize">
                 {project.title}
               </h3>
               <div className="flex justify-center items-center">

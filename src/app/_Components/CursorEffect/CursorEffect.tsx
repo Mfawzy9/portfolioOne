@@ -55,7 +55,7 @@ const CursorEffect = () => {
     };
 
     const elements = document.querySelectorAll(
-      'a, button, [role="button"], [onClick]',
+      'a, button, [role="button"], [onClick] , .cursor-pointer',
     );
 
     elements.forEach((el) => {
