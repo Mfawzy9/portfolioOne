@@ -8,7 +8,6 @@ import mainImg from "../../../../public/assets/imgs/me2.png";
 import { IInfos } from "@/app/Interfaces/IAboutInfos";
 import dynamic from "next/dynamic";
 import CursorEffect from "@/app/_Components/CursorEffect/CursorEffect";
-import Link from "next/link";
 
 const VisibilityHandler = dynamic(
   () => import("../../_Components/VisibilityHandler"),
@@ -93,10 +92,9 @@ export default function About() {
                 })}
                 <Content>
                   <li className="mt-2">
-                    <Link
-                      shallow={false}
+                    <a
                       aria-label="download cv"
-                      download={"RouteCertification.pdf"}
+                      download=""
                       href="/RouteCertification.pdf"
                       target="_blank"
                       className="brightness-150 dark:brightness-100 group hover:shadow-lg hover:shadow-ring/60
@@ -113,7 +111,7 @@ export default function About() {
                           Download CV
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </li>
                 </Content>
               </ul>
