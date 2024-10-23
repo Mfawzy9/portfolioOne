@@ -11,8 +11,8 @@ A dynamic personal portfolio developed with **[Next.js](https://nextjs.org/)** a
 - **[React Icons](https://react-icons.github.io/react-icons/)**: A library for React icons.
 - **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework.
 - **[Context API](https://reactjs.org/docs/context.html)**: A global state management solution.
-- **[Next Themes](https://github.com/danilowoz/next-themes)**: Theme switching for Next.js applications.
-- **[cookies-next](https://github.com/sandii/cookies-next)**: A library for cookie storage management.
+- **[Next Themes](https://github.com/pacocoursey/next-themes)**: Theme switching for Next.js applications.
+- **[cookies-next](https://github.com/andreizanik/cookies-next)**: A library for cookie storage management.
 
 ## Features
 
