@@ -23,11 +23,16 @@ const LoaderContextProvider = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const handleNavigate = (newPath: string) => {
+    document.body.classList.add("overflow-hidden");
     setPath(newPath);
 
     setTimeout(() => {
       router.push(newPath);
     }, 200);
+
+    setTimeout(() => {
+      document.body.classList.remove("overflow-hidden");
+    }, 1500);
   };
 
   return (
