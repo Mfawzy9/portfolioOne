@@ -28,12 +28,11 @@ const LoaderContextProvider = ({ children }: { children: React.ReactNode }) => {
       router.push(newPath);
     }, 200);
 
-    setTimeout(
-      () => {
-        document.body.classList.remove("overflow-hidden");
-      },
-      loading ? 3200 : 1500,
-    );
+    if (loading) {
+      return;
+    } else {
+      setTimeout(() => document.body.classList.remove("overflow-hidden"), 1500);
+    }
   };
 
   return (
