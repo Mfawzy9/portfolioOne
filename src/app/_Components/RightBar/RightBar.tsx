@@ -50,10 +50,10 @@ const RightBar = () => {
             >
               {link.icon}
               <span
-                className="absolute -right-5 top-1/2 -z-50 hidden bg-ring -translate-y-1/2 rounded py-1
-                  px-2 font-bold text-white text-base invisible group-hover:visible opacity-0
-                  transition-all duration-300 group-hover:right-16 group-hover:opacity-100
-                  md:block"
+                className="absolute pointer-events-none -right-5 top-1/2 -z-50 hidden bg-ring
+                  -translate-y-1/2 rounded py-1 px-2 font-bold text-white text-base invisible
+                  group-hover:visible opacity-0 transition-all duration-300 group-hover:right-16
+                  group-hover:opacity-100 md:block"
               >
                 {link.lable}
               </span>

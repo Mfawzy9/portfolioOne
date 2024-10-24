@@ -63,8 +63,8 @@ const SocialIcons = ({
                   </div>
                   <span
                     className="absolute block group-hover:visible group-hover:-top-11 group-hover:opacity-100
-                      font-bold text-sm opacity-0 invisible transition-all duration-500 bg-ring z-10
-                      px-2.5 py-1 rounded -top-5"
+                      pointer-events-none font-bold text-sm opacity-0 invisible transition-all
+                      duration-500 bg-ring z-10 px-2.5 py-1 rounded -top-5"
                   >
                     {icon.label}
                   </span>
