@@ -42,11 +42,11 @@ export default function About() {
           {/* infos */}
           <div className="flex flex-col px-2">
             <div className="space-y-1 text-center">
-              <Content className="flex justify-center">
+              <Content className="flex justify-center mb-4 rounded-full w-fit mx-auto">
                 <figure className="rounded-full border-2 border-ring w-[150px] h-[150px] relative">
                   <Image
                     src={mainImg}
-                    className="mb-4 w-full h-full rounded-full object-contain relative z-20 bg-[#322b3a]"
+                    className="w-full h-full rounded-full object-contain relative z-20 bg-[#322b3a]"
                     alt="profile photo"
                     width={150}
                     height={150}
@@ -120,12 +120,12 @@ export default function About() {
           {/* content */}
           <div className="flex flex-col gap-7 text-lg lg:col-span-2 pb-10 lg:pe-10 mt-10 xl:mt-0">
             <Content>
-              <h5 className="text-ring font-semibold border-b-2 text-3xl text-start w-fit">
+              <h5 className="text-ring font-semibold border-b-2 border-foreground text-3xl text-start w-fit">
                 who am i ?
               </h5>
             </Content>
             <Content>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 dark:text-muted-foreground leading-relaxed">
                 My name is{" "}
                 <span className="text-foreground font-semibold">
                   Mahmoud Fawzy.{" "}
@@ -138,7 +138,7 @@ export default function About() {
             </Content>
 
             <Content>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 dark:text-muted-foreground leading-relaxed">
                 I focus on building pixel-perfect user interfaces, while
                 prioritizing performance and user experience. I enjoy working
                 closely with designers and backend developers to create seamless
@@ -147,7 +147,7 @@ export default function About() {
             </Content>
 
             <Content>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 dark:text-muted-foreground leading-relaxed">
                 With a strong background in JavaScript, I focus on building
                 efficient and scalable applications using modern frontend
                 technologies like React.js and Next.js. I have hands-on
@@ -157,7 +157,7 @@ export default function About() {
               </p>
             </Content>
             <Content>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 dark:text-muted-foreground leading-relaxed">
                 {"I'm"} constantly pushing my limits by learning new frameworks
                 and techniques, and I aim to dive deeper into full-stack
                 development in the future while continuously refining my

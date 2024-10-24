@@ -33,11 +33,9 @@ export default function Home() {
           className="grid lg:grid-cols-2 text-center lg:text-start items-center w-full md:px-16
             lg:px-0 lg:pe-3"
         >
-          <Content>
-            <div className="mx-auto w-60 h-60 lg:w-full lg:h-full mb-3 lg:mb-0">
-              <HomeImg />
-            </div>
-          </Content>
+          <div className="mx-auto w-60 h-60 lg:w-full lg:h-full mb-3 lg:mb-0">
+            <HomeImg />
+          </div>
           <div className="flex flex-col gap-3">
             <Content>
               <h2 className="text-3xl sm:text-6xl font-bold text-ring uppercase">

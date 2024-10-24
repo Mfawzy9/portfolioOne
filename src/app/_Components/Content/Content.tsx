@@ -27,10 +27,11 @@ const Content = ({
         () => {
           setHide(true);
         },
-        loading ? 3200 : 1000,
+        loading ? 3200 : 1300,
       );
     }
-  }, [isInView, loading, mainControls, sliderControls]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView, mainControls, sliderControls]);
 
   return (
     <>
@@ -53,9 +54,8 @@ const Content = ({
           animate={mainControls}
           transition={{
             duration: 0.5,
-            delay: loading ? 2.3 : 0.7,
+            delay: loading ? 2.2 : 0.7,
           }}
-          // className={`${className ?? ""}`}
         >
           {children}
         </motion.main>
@@ -73,10 +73,11 @@ const Content = ({
           animate={sliderControls}
           transition={{
             duration: 0.5,
-            delay: loading ? 2.2 : 0.5,
+            delay: loading ? 2.1 : 0.5,
             ease: "easeIn",
           }}
-          className={`absolute ${hide ? "hidden" : ""} bottom-0 w-full h-full left-0 z-10 bg-muted`}
+          className={`absolute ${hide ? "hidden" : ""} bottom-0 w-full h-full left-0 z-10 bg-gray-500
+            dark:bg-muted`}
         ></motion.div>
       </div>
     </>
