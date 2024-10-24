@@ -599,6 +599,11 @@ export const projectsArr: IProject[] = [
         link: "https://www.javascript.com/",
       },
       {
+        name: "Object-Oriented Programming",
+        description: "Code organization methodology.",
+        link: "https://en.wikipedia.org/wiki/Object-oriented_programming",
+      },
+      {
         name: "jQuery",
         description: "Simplifies DOM manipulation.",
         link: "https://jquery.com/",
@@ -614,9 +619,9 @@ export const projectsArr: IProject[] = [
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
       {
-        name: "Object-Oriented Programming",
-        description: "Code organization methodology.",
-        link: "https://en.wikipedia.org/wiki/Object-oriented_programming",
+        name: "Bootstrap",
+        description: "Responsive design framework.",
+        link: "https://getbootstrap.com/",
       },
     ],
     technologiesIcons: [HTML, Bootstrap, JQuery, JavaScript, CSS],
