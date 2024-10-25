@@ -26,7 +26,7 @@ const LoaderContextProvider = ({ children }: { children: React.ReactNode }) => {
 
     setTimeout(() => {
       router.push(newPath);
-    }, 200);
+    }, 300);
 
     if (loading) {
       return;

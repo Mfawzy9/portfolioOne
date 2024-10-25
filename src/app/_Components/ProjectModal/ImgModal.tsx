@@ -47,9 +47,9 @@ const ImgModal = ({
           </div>
         )}
         {!imgLoading && (
-          <div className="absolute top-3 right-3 p-1 rounded-full bg-black">
+          <div className="absolute top-3 right-3 p-1 bg-black">
             <FaTimes
-              className="text-xl cursor-pointer text-white"
+              className="sm:text-xl cursor-pointer text-white"
               onClick={() => setImgModal({ img: "", idx: 0 })}
             />
           </div>
@@ -61,7 +61,7 @@ const ImgModal = ({
           width={800}
           height={400}
           quality={100}
-          className="w-full h-full ring"
+          className="w-full h-full ring ring-ring rounded"
         />
       </div>
     </div>
