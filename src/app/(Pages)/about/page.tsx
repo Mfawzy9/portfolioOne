@@ -95,7 +95,7 @@ export default function About() {
                     <a
                       aria-label="download cv"
                       download=""
-                      href="/RouteCertification.pdf"
+                      href="/mahmoudFawzy.pdf"
                       target="_blank"
                       className="brightness-150 dark:brightness-100 group hover:shadow-lg hover:shadow-ring/60
                         block w-full transition ease-in-out hover:scale-105 p-1 rounded-xl

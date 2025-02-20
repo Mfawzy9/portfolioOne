@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const HireMe = () => {
   return (
     <>
@@ -7,7 +5,7 @@ const HireMe = () => {
         className="w-28 h-28 sm:w-40 sm:h-40 xl:w-44 xl:h-44 absolute sm:-bottom-1 left-0 flex
           items-center justify-center"
       >
-        <Link
+        <a
           href="mailto:mah.fawzy96@gmail.com"
           className="absolute top-1/2 left-1/2 hover:bg-foreground hover:text-background
             transition-all -translate-x-1/2 -translate-y-1/2 text-sm sm:text-lg
@@ -16,14 +14,14 @@ const HireMe = () => {
             font-bold"
         >
           Hire Me
-        </Link>
+        </a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="810.000000pt"
           height="810.000000pt"
           viewBox="0 0 810.000000 810.000000"
           preserveAspectRatio="xMidYMid meet"
-          className="animate-spin-slow w-full h-auto"
+          className="w-full h-auto animate-spin-slow"
         >
           <g
             transform="translate(0.000000,810.000000) scale(0.100000,-0.100000)"
