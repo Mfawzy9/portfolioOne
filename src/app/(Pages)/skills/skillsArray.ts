@@ -20,6 +20,11 @@ import Vite from "../../_Components/skillsIcons/Vite";
 import FramerMotion from "@/app/_Components/skillsIcons/FramerMotion";
 import ReactQuery from "@/app/_Components/skillsIcons/ReactQuery";
 import Formik from "@/app/_Components/skillsIcons/Formik";
+import SwiperJs from "@/app/_Components/skillsIcons/SwiperJs";
+import Firebase from "@/app/_Components/skillsIcons/Firebase";
+import NextIntl from "@/app/_Components/skillsIcons/Next-Intl";
+import Yup from "@/app/_Components/skillsIcons/Yup";
+import Zod from "@/app/_Components/skillsIcons/Zod";
 
 interface Iskills {
   skill: string;
@@ -87,6 +92,16 @@ const skillsArray: Iskills[] = [
     link: "https://formik.org/",
   },
   {
+    skill: "Yup",
+    icon: Yup,
+    link: "https://github.com/jquense/yup",
+  },
+  {
+    skill: "Zod",
+    icon: Zod,
+    link: "https://zod.dev/",
+  },
+  {
     skill: "Git",
     icon: Git,
     link: "https://git-scm.com/",
@@ -128,6 +143,21 @@ const skillsArray: Iskills[] = [
     icon: Npm,
     lightIcon: NpmLight,
     link: "https://www.npmjs.com/",
+  },
+  {
+    skill: "Swiper.Js",
+    icon: SwiperJs,
+    link: "https://swiperjs.com/",
+  },
+  {
+    skill: "Firebase",
+    icon: Firebase,
+    link: "https://firebase.google.com/",
+  },
+  {
+    skill: "Next-Intl",
+    icon: NextIntl,
+    link: "https://next-intl.dev/",
   },
 ];
 

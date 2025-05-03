@@ -1,5 +1,6 @@
 import Bootstrap from "@/app/_Components/skillsIcons/Bootstrap";
 import CSS from "@/app/_Components/skillsIcons/CSS";
+import Firebase from "@/app/_Components/skillsIcons/Firebase";
 import Formik from "@/app/_Components/skillsIcons/Formik";
 import FramerMotion from "@/app/_Components/skillsIcons/FramerMotion";
 import HTML from "@/app/_Components/skillsIcons/HTML";
@@ -11,6 +12,7 @@ import ReactQuery from "@/app/_Components/skillsIcons/ReactQuery";
 import SwiperJs from "@/app/_Components/skillsIcons/SwiperJs";
 import TailwindCSS from "@/app/_Components/skillsIcons/TailwindCSS";
 import TypeScript from "@/app/_Components/skillsIcons/TypeScript";
+import Yup from "@/app/_Components/skillsIcons/Yup";
 import Zod from "@/app/_Components/skillsIcons/Zod";
 
 export interface IProject {
@@ -34,6 +36,103 @@ export interface Itechonlogy {
 }
 
 export const projectsArr: IProject[] = [
+  {
+    id: 15,
+    title: "FilmO'Clock",
+    description:
+      "A feature-rich movie app for browsing movies and TV shows. It includes multilingual support (English and Arabic), dynamic filtering, real-time search, and detailed movie info. Features a dark UI, Firebase authentication, lazy-loaded content, and SEO optimization.",
+    img: "/assets/projectsImgs/FilmO'Clock/Cover.jpg",
+    imgs: [
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/1.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/2.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/3.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/4.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/5.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/6.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/7.jpg",
+      "/assets/projectsImgs/FilmO'Clock/NewFolder/8.jpg",
+    ],
+    demo: "https://film-oclock.vercel.app/",
+    repo: "https://github.com/Mfawzy9/Film-OClock",
+    technologies: [
+      {
+        name: "Next.js",
+        description: "SEO-friendly React framework.",
+        link: "https://nextjs.org/",
+      },
+      {
+        name: "TypeScript",
+        description: "Static typing for JS.",
+        link: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "Redux Toolkit",
+        description: "State management toolkit.",
+        link: "https://redux-toolkit.js.org/",
+      },
+      {
+        name: "Firebase",
+        description: "Authentication and database.",
+        link: "https://firebase.google.com/",
+      },
+      {
+        name: "next-intl",
+        description: "Internationalization for React.",
+        link: "https://next-intl.dev/",
+      },
+      {
+        name: "RTK Query",
+        description: "Data fetching and caching.",
+        link: "https://redux-toolkit.js.org/rtk-query/overview",
+      },
+      {
+        name: "Framer Motion",
+        description: "Smooth UI animations.",
+        link: "https://motion.dev/",
+      },
+      {
+        name: "Formik",
+        description: "Form handling library.",
+        link: "https://formik.org/",
+      },
+      {
+        name: "Yup",
+        description: "Schema validation tool.",
+        link: "https://github.com/jquense/yup",
+      },
+      {
+        name: "Sonner",
+        description: "Customizable toast notifications.",
+        link: "https://sonner.emilkowal.ski/",
+      },
+      {
+        name: "Swiper",
+        description: "Touch slider component.",
+        link: "https://swiperjs.com/",
+      },
+      {
+        name: "React Icons",
+        description: "Icon library for React.",
+        link: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        name: "react-intersection-observer",
+        description: "Lazy loading observer.",
+        link: "https://react-intersection-observer.vercel.app/",
+      },
+    ],
+    technologiesIcons: [
+      NextJs,
+      TypeScript,
+      TailwindCSS,
+      Firebase,
+      FramerMotion,
+      Yup,
+      Formik,
+    ],
+    category: "Next.Js",
+    categoryIcons: [NextJs],
+  },
   {
     id: 14,
     title: "PortfolioOne",
@@ -97,7 +196,7 @@ export const projectsArr: IProject[] = [
       },
     ],
     technologiesIcons: [NextJs, TypeScript, TailwindCSS, FramerMotion, Zod],
-    category: "Next Js",
+    category: "Next.Js",
     categoryIcons: [NextJs],
   },
   {
@@ -115,7 +214,6 @@ export const projectsArr: IProject[] = [
       "/assets/projectsImgs/freshCart/NewFolder/6.jpg",
       "/assets/projectsImgs/freshCart/NewFolder/7.jpg",
       "/assets/projectsImgs/freshCart/NewFolder/8.jpg",
-      "/assets/projectsImgs/freshCart/NewFolder/9.jpg",
     ],
     demo: "https://fresh-cart-beryl-eight.vercel.app/",
     repo: "https://github.com/Mfawzy9/FreshCart",
@@ -195,7 +293,7 @@ export const projectsArr: IProject[] = [
       SwiperJs,
       Formik,
     ],
-    category: "React Js",
+    category: "React.Js",
     categoryIcons: [React],
   },
   {

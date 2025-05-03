@@ -21,7 +21,7 @@ const Projects = () => {
     <>
       <CursorsContainer />
       <VisibilityHandler />
-      <section className="min-h-screen pb-20 lg:pb-4 container 3xl:flex flex-col justify-center">
+      <section className="min-h-screen pb-20 lg:pb-4 container">
         <Content>
           <Title primary="my" span="works" secondary="projects" />
         </Content>
