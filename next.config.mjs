@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
-      //projects images
       {
         protocol: "https",
         hostname: "i.postimg.cc",
