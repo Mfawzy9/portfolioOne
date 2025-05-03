@@ -104,12 +104,13 @@ export const ProjectsCard = ({ className }: { className?: string }) => {
                     overflow-hidden shadow-[0_0_6px_0px] shadow-ring relative z-20 rounded"
                 >
                   <Image
-                    priority
+                    priority={idx < 3}
+                    loading={idx < 3 ? "eager" : "lazy"}
                     src={_project.img}
                     width={450}
                     height={250}
                     alt={_project.title}
-                    className="w-full group-hover:scale-105 transition-all duration-500"
+                    className="group-hover:scale-105 transition-all duration-500 object-cover w-full h-full"
                   />
 
                   <div className="flex flex-wrap w-full justify-between items-center px-3 pb-2">
