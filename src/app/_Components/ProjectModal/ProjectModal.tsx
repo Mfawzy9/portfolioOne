@@ -68,8 +68,8 @@ const ProjectModal = ({
                 stiffness: 260,
                 damping: 15,
               }}
-              className="max-w-4xl max-h-[90vh] lg:mx-auto bg-card rounded flex flex-col gap-5
-                overflow-x-hidden sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative
+              className="max-w-4xl max-h-[80vh] md:max-h-[90vh] lg:mx-auto bg-card rounded flex flex-col
+                gap-5 overflow-x-hidden sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative
                 overflow-y-auto mx-1 pt-3 sm:pt-10 sm:mx-2"
             >
               {imgModal.img !== "" && (
