@@ -68,9 +68,9 @@ const ProjectModal = ({
                 stiffness: 260,
                 damping: 15,
               }}
-              className="max-w-4xl lg:mx-auto bg-card rounded flex flex-col gap-5 overflow-x-hidden mb-20
-                sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative max-h-screen overflow-y-auto
-                mx-1 pt-20 sm:py-0 sm:pt-10 sm:mx-2"
+              className="max-w-4xl max-h-[90vh] lg:mx-auto bg-card rounded flex flex-col gap-5
+                overflow-x-hidden sm:mb-0 shadow-[0_0_7px_0px] shadow-ring relative
+                overflow-y-auto mx-1 pt-3 sm:pt-10 sm:mx-2"
             >
               {imgModal.img !== "" && (
                 <ImgModal
@@ -82,7 +82,7 @@ const ProjectModal = ({
               )}
 
               <FaTimes
-                className="absolute top-20 sm:top-3 right-3 text-2xl cursor-pointer"
+                className="absolute top-3 sm:top-3 right-3 text-2xl cursor-pointer"
                 onClick={() => {
                   setModal(false);
                   document.body.classList.remove("overflow-y-hidden");
@@ -127,7 +127,7 @@ const ProjectModal = ({
                 >
                   description:
                 </h3>
-                <p className="text-sm leading-relaxed overflow-y-auto">
+                <p className="text-sm leading-relaxed overflow-y-auto max-h-40 sm:max-h-full">
                   {project.description}
                 </p>
               </div>
@@ -141,7 +141,7 @@ const ProjectModal = ({
                   technologies used:
                 </h3>
 
-                <p className="text-sm inline-block leading-relaxed overflow-y-auto">
+                <p className="text-sm inline-block leading-relaxed max-h-40 sm:max-h-full overflow-y-auto">
                   {project.technologies.map((tech, idx) => {
                     return (
                       <Fragment key={idx}>
@@ -160,10 +160,10 @@ const ProjectModal = ({
               </div>
 
               <div
-                className="flex flex-wrap gap-3 justify-between items-center sm:gap-0 bg-gray-700
-                  dark:bg-border pb-10 sm:pb-3 py-5 sm:py-3 p-3"
+                className="flex flex-wrap gap-3 justify-center sm:justify-between items-center sm:gap-0
+                  bg-gray-700 dark:bg-border sm:pb-3 py-5 sm:py-3 p-1 sm:p-3"
               >
-                <div className="techIcons flex gap-2">
+                <div className="techIcons flex gap-1 flex-wrap">
                   {project.technologiesIcons.map((Icon, idx) => {
                     return (
                       <span
