@@ -38,12 +38,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-3">
             <Content>
-              <h2 className="text-3xl sm:text-6xl font-bold text-ring uppercase">
+              <h2 className="text-3xl sm:text-4xl xl:text-5xl 3xl:text-6xl font-bold text-ring uppercase">
                 Mahmoud Fawzy
               </h2>{" "}
             </Content>
             <Content>
-              <h3 className="text-xl sm:text-3xl font-bold text-secondary-foreground uppercase">
+              <h3 className="text-xl sm:text-2xl xl:text-3xl font-bold text-secondary-foreground uppercase">
                 Front-End Developer
               </h3>{" "}
             </Content>
